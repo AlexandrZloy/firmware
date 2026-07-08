@@ -44,8 +44,8 @@
 #define SX126X_BUSY LORA_DIO2
 #define SX126X_RESET LORA_RESET
 #define SX126X_DIO2_AS_RF_SWITCH // DIO2 is used to control the TX side of the RF switch
-#define SX126X_ANT_SW LORA_RXEN // Broken in the SX126xInterface.cpp: tries to call digitalWrite() before pinMode()!
-#ifndef SX126X_ANT_SW
+#define SX126X_ANT_SW LORA_RXEN // Put the RF switch into a Single-pin control mode
+#ifndef SX126X_ANT_SW // Alternativly use a Complementary-pin control mode
     #define SX126X_RXEN LORA_RXEN
     #define SX126X_TXEN RADIOLIB_NC
 #endif
