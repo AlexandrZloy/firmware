@@ -2,7 +2,6 @@
   "build": {
     "arduino": {
       "ldscript": "esp32s3_out.ld",
-      "partitions": "default.csv",
       "memory_type": "qio_qspi"
     },
     "core": "esp32",
@@ -30,7 +29,7 @@
   },
   "frameworks": ["arduino", "espidf"],
   "platforms": ["espressif32"],
-  "name": "Waveshare ESP32-S3-Zero (4 MB QD, 2MB PSRAM)",
+  "name": "Waveshare ESP32-S3-Zero FH4R2 (4 MB QD, 2MB PSRAM)",
   "upload": {
     "flash_size": "4MB",
     "maximum_ram_size": 327680,

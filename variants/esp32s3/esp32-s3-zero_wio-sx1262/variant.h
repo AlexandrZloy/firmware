@@ -1,5 +1,5 @@
 /*
-
+PE4259 RF switch https://www.psemi.com/pdf/datasheets/pe4259ds.pdf
 */
 #define HAS_GPS 0
 #undef GPS_RX_PIN
