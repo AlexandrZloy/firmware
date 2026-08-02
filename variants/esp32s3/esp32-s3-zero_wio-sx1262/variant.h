@@ -1,5 +1,6 @@
 /*
 PE4259 RF switch https://www.psemi.com/pdf/datasheets/pe4259ds.pdf
+Partition table https://github.com/espressif/arduino-esp32/blob/master/tools/partitions/huge_app.csv
 */
 #define HAS_GPS 0
 #undef GPS_RX_PIN
@@ -8,11 +9,11 @@ PE4259 RF switch https://www.psemi.com/pdf/datasheets/pe4259ds.pdf
 // Buttons
 #define BUTTON_PIN 43 // TX pin
 // UART
-#define UART_TX 16
-#define UART_RX 15
+#define UART_TX 8
+#define UART_RX 7
 // I2C
-#define I2C_SCL 8
-#define I2C_SDA 7
+#define I2C_SCL 6
+#define I2C_SDA 5
 
 // Board has RGB LED 21
 #define HAS_NEOPIXEL                         // Enable the use of neopixels
