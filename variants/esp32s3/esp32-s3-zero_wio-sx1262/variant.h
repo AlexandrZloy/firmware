@@ -2,15 +2,17 @@
 PE4259 RF switch https://www.psemi.com/pdf/datasheets/pe4259ds.pdf
 Partition table https://github.com/espressif/arduino-esp32/blob/master/tools/partitions/huge_app.csv
 */
-#define HAS_GPS 0
+#define HAS_GPS 1
 #undef GPS_RX_PIN
 #undef GPS_TX_PIN
+#define GPS_RX_PIN 8
+#define GPS_TX_PIN 7
 
 // Buttons
 #define BUTTON_PIN 43 // TX pin
 // UART
-#define UART_TX 8
-#define UART_RX 7
+#define UART_TX -1
+#define UART_RX -1
 // I2C
 #define I2C_SCL 6
 #define I2C_SDA 5
@@ -45,7 +47,7 @@ Partition table https://github.com/espressif/arduino-esp32/blob/master/tools/par
 #define SX126X_BUSY LORA_DIO2
 #define SX126X_RESET LORA_RESET
 #define SX126X_DIO2_AS_RF_SWITCH // DIO2 is used to control the TX side of the RF switch
-#define SX126X_ANT_SW LORA_RXEN // Put the RF switch into a Single-pin control mode
+//#define SX126X_ANT_SW LORA_RXEN // Put the RF switch into a Single-pin control mode
 #ifndef SX126X_ANT_SW // Alternativly use a Complementary-pin control mode
     #define SX126X_RXEN LORA_RXEN
     #define SX126X_TXEN RADIOLIB_NC
